@@ -25,13 +25,14 @@ John Doe\\ACM SIGIR\\\emph{john.doe@sigir.org}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 \end{abstract}
 
-\section{Introduction}
+\section{Publication Type}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum~\citep{forum}.
+This is \textbf{not} a dissertation abstract, so you use \texttt{\textbackslash documentclass\{sigir\_forum\}} at the top of the file, and set the correct publication type field \texttt{\textbackslash pubtype}. Write a regular abstract and main text as usual.
 
-\section{Conclusions}
+\section{Citations}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum~\citet{forum}.
+Please use citations with package \texttt{natbib}\footnote{\url{https://ctan.org/pkg/natbib?lang=en}}
+You can use parenthetical citations like~\citep{forum} through \texttt{\textbackslash citep}, or textual citations like~\citet{forum} through \texttt{\textbackslash citet}.
 
 \bibliography{sigir_forum}
 \end{document}
