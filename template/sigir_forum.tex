@@ -1,0 +1,51 @@
+%\documentclass[dissertation]{sigir_forum}
+\documentclass[]{sigir_forum}
+
+\def\pubissue{Vol. 54 No. 2 December 2020}
+
+% CHOOSE A PUBLICATION TYPE
+%\def\pubtype{SIGIR NEWS}
+\def\pubtype{PAPER}
+%\def\pubtype{EVENT REPORT}
+%\def\pubtype{OPINION PAPER}
+%\def\pubtype{DISSERTATION ABSTRACT}
+
+% ONLY FOR DISSERTATION ABSTRACTS
+\def\dissertationplace{University of SIGIR, City, Country}
+\def\dissertationsupervisor{Leslie Lamport}
+\def\dissertationurl{https://name.domain/thesis-file.pdf}
+
+\begin{document}
+% USE TITLE CASE FOR THE TITLE
+\title{Instructions for SIGIR Forum Publication Template}
+
+\author{
+First editor\\SIGIR Forum\\\emph{editors\_SIGIR@acm.org}
+\and
+Second editor\\SIGIR Forum\\\emph{editors\_SIGIR@acm.org}
+\and
+Third editor\\SIGIR Forum\\\emph{editors\_SIGIR@acm.org}
+}
+
+\maketitle 
+\begin{abstract}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\end{abstract}
+
+\section{Dissertation Abstracts}
+
+If this is a dissertation abstract, use \texttt{\textbackslash documentclass[dissertation]\{sigir\_forum\}} at the top of your file, and fill in the metadata fields \texttt{\textbackslash dissertationplace}, \texttt{\textbackslash dissertationsupervisor} and \texttt{\textbackslash dissertationurl}. Write all the text within the \texttt{\textbackslash abstract} environment.
+
+You can only reference up to five of your own publications, but not someone else's. If you would rather just list the publications but not cite them in the text, use command \texttt{\textbackslash nocite}.
+
+\section{Other Publications}
+
+If this is \textbf{not} a dissertation abstract, use \texttt{\textbackslash documentclass\{sigir\_forum\}} at the top of your file, and set the correct publication type field \texttt{\textbackslash pubtype}. Write a regular abstract and main text as usual.
+
+\section{Citations}
+
+Please use citations with package \texttt{natbib}\footnote{\url{https://ctan.org/pkg/natbib?lang=en}}
+You can use parenthetical citations like~\citep{forum} through \texttt{\textbackslash citep}, or textual citations like~\citet{forum} through \texttt{\textbackslash citet}.
+
+\bibliography{sigir_forum}
+\end{document}
