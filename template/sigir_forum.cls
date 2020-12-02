@@ -18,6 +18,7 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{color}
 \RequirePackage{amsmath}
+\RequirePackage{xspace}
 
 \topmargin -0.8cm
 \oddsidemargin -0.7cm
@@ -67,7 +68,7 @@
   \normalsize}
 {\par
 \vspace{0.3in}
-\noindent\textbf{Awarded by:} \dissertationplace.
+\noindent\textbf{Awarded by:} \dissertationplace\xspace\textbf{on} \dissertationdate.
 
 \noindent\textbf{Supervised by:} \dissertationsupervisor.
 
