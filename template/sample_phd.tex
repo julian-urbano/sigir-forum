@@ -4,9 +4,9 @@
 \def\pubtype{DISSERTATION ABSTRACT}
 
 % ONLY FOR DISSERTATION ABSTRACTS
-\def\dissertationdate{1 January 1970}
 \def\dissertationplace{University of SIGIR, City, Country}
-\def\dissertationsupervisor{Leslie Lamport}
+\def\dissertationdate{1 January 1970} % date of defense
+\def\dissertationsupervisor{Leslie Lamport} % <first name> <last name,> without titles
 \def\dissertationurl{https://name.domain/thesis-file.pdf}
 
 \begin{document}
@@ -19,7 +19,7 @@ Jane Doe\\ACM SIGIR\\\emph{jane.doe@sigir.org}
 
 \maketitle 
 \begin{abstract}
-This is a dissertation abstract, so you use \texttt{\textbackslash documentclass[dissertation]\{sigir\_forum\}} at the top of the file, and fill in the metadata fields \texttt{\textbackslash dissertationplace}, \texttt{\textbackslash dissertationsupervisor} and \texttt{\textbackslash dissertationurl}. Write all the text within the \texttt{\textbackslash abstract} environment.
+This is a dissertation abstract, so you use \texttt{\textbackslash documentclass[dissertation]\{sigir\_forum\}} at the top of the file, and fill in the metadata fields \texttt{\textbackslash dissertationplace}, \texttt{\textbackslash dissertationdate}, \texttt{\textbackslash dissertationsupervisor} and \texttt{\textbackslash dissertationurl}. Write all the text within the \texttt{\textbackslash abstract} environment.
 
 You can only reference up to five of your own publications, but not someone else's. If you would rather just list the publications but not cite them in the text, use command \texttt{\textbackslash nocite}.
 
