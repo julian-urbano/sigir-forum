@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{PhD}[2013/03/11 PhD Dissertation LaTeX class]
+\ProvidesClass{sigir_forum}[2013/03/11 PhD Dissertation LaTeX class]
 \LoadClass[12pt]{article}
 
 \newif\if@dissertation\@dissertationfalse
@@ -12,7 +12,7 @@
 \RequirePackage{fancyhdr}
 \RequirePackage{url}
 \RequirePackage[colorlinks=true,allcolors=blue]{hyperref}
-\RequirePackage{natbib}
+\RequirePackage[square]{natbib}
 \RequirePackage{fix-cm}
 \RequirePackage{graphicx}
 \RequirePackage[utf8]{inputenc}
@@ -86,5 +86,5 @@
 {\endquote}
 \fi
 
-\bibliographystyle{unsrtnat}
+\bibliographystyle{newapa}
 \endinput
