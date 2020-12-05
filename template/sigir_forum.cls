@@ -86,5 +86,5 @@
 {\endquote}
 \fi
 
-\bibliographystyle{newapa}
+\bibliographystyle{plainnat}
 \endinput
