@@ -1,0 +1,112 @@
+% CHOOSE A PUBLICATION TYPE
+\documentclass[news]{sigirforum}
+%\documentclass[keynote]{sigirforum}
+%\documentclass[paper]{sigirforum}
+%\documentclass[event]{sigirforum}
+%\documentclass[opinion]{sigirforum}
+%\documentclass[dissertation]{sigirforum}
+
+% DEFINE METADATA FOR VOLUME AND NUMBER
+\def\pubissue{Vol. 55 No. 2 December 2021}
+
+% DEFINE METADATA FOR EVENT REPORTS
+\def\eventdate{10--14 September, 2021}
+\def\eventurl{https://foo2021.net}
+
+% DEFINE METADATA FOR DISSERTATION ABSTRACTS
+\def\dissertationplace{University of SIGIR, City, Country}
+\def\dissertationdate{1 January 1970} % date of defense
+\def\dissertationsupervisor{Leslie Lamport} % <first> <last>, without titles
+\def\dissertationurl{https://name.domain/thesis-file.pdf}
+
+\begin{document}
+% USE TITLE CASE FOR THE TITLE
+\title{SIGIR Forum Publication Template}
+
+\author{
+Jane Doe\\ACM SIGIR\\\emph{jane.doe@sigir.org}
+\and
+John Doe\\ACM SIGIR\\\emph{john.doe@sigir.org}
+}
+
+\maketitle 
+\begin{abstract}
+This sample document contains the instructions for the SIGIR Forum publication template in \LaTeX\xspace as of September 2021. For the latest version, please visit \url{https://sigir.org/forum/}. 
+\end{abstract}
+
+\section{Publication Type}
+
+The publication type is indicated as an option to the class, such as
+\begin{verbatim}
+  \documentclass[news]{sigirforum}
+\end{verbatim}
+Currently supported types are:
+\begin{itemize}
+	\item \texttt{news} for publications about the SIG, such as the Chair's letter or the annual business meeting notes.
+	\item \texttt{keynote} for the extended abstract of a keynote presented at a relevant event.
+	\item \texttt{paper} for a research paper.
+	\item \texttt{event} for the report about a relevant event, such as a conference or workshop.
+	\item \texttt{opinion} for an opinion paper.
+	\item \texttt{dissertation} for a PhD dissertation abstract.
+\end{itemize}
+
+If your publication does not fit in these categories, please contact the editors.
+
+\section{Title}
+
+The title of the publication is entirely up to the authors, but there are exceptions. For \textbf{event reports}, please follow this template for the title of your publication:
+\begin{enumerate}
+	\item Main-event: \textsl{Report on the 1st Conference on Foo (Foo2021)}.
+	\item Co-located event: \textsl{Report on the 1st Workshop on Bar (Bar2021) at Foo2021}.
+	\item Special sessions or panels: \textsl{Report on the Foo2021 special session on Bar}.
+\end{enumerate}
+
+If your event does not fit in these categories, please contact the editors for suggestions. For \textbf{keynote abstracts}, please follow this template: \textsl{The Title: A keynote at Foo2021}. For \textbf{dissertation abstracts}, please use the same title as in your dissertation.
+
+\section{Metadata}
+
+Update the volume and number metadata in the preamble:
+\begin{verbatim}
+  \def\pubissue{Vol. 55 No. 2 December 2021}
+\end{verbatim}
+If unsure, please contact the editors.
+
+Some publications have special formatting for metadata. For \textbf{event reports}, please indicate in the preamble the date(s) of the event and the URL of its website:
+\begin{verbatim}
+  \def\eventdate{10--14 September, 2021}
+  \def\eventurl{https://foo2021.net}
+\end{verbatim}
+If there is no website, leave it empty:
+\begin{verbatim}
+  \def\eventurl{}
+\end{verbatim}
+
+For \textbf{dissertation abstracts}, please indicate the institution that granted the degree, the defense date, the name(s) of the supervisor(s) without titles (ie. no \textsl{Dr.} or \textsl{Prof.}), and a URL to access the dissertation:
+\begin{verbatim}
+  \def\dissertationplace{University of SIGIR, City, Country}
+  \def\dissertationdate{1 January 1970}
+  \def\dissertationsupervisor{Leslie Lamport}
+  \def\dissertationurl{https://name.domain/thesis-file.pdf}
+\end{verbatim}
+If there is no website, leave it empty:
+\begin{verbatim}
+  \def\dissertationurl{}
+\end{verbatim}
+
+\section{Authors}
+
+All authors must have an affiliation, and at least one of them must indicate a contact email address. In \textbf{dissertation abstracts}, only the author of the dissertation will appear in the SIGIR Forum publication.
+
+\section{Text}
+
+In \textbf{disseration abstracts}, please keep all the text within the \texttt{abstract} environment; no text is allowed out of it. For other publication types, write an abstract and use sections as usual.
+
+\section{Citations}
+
+Please use citations with package \texttt{natbib}\footnote{\url{https://ctan.org/pkg/natbib?lang=en}}.
+You can use parenthetical citations like~\citep{forum} through \texttt{\textbackslash citep}, or textual citations like~\citet{forum} through \texttt{\textbackslash citet}.
+
+In \textbf{dissertation abstracts} you can only reference up to five of your own publications, but not someone else's. If you would rather just list the publications but not cite them in the abstract, use command \texttt{\textbackslash nocite}.
+
+\bibliography{sigirforum}
+\end{document}
