@@ -43,6 +43,7 @@
 \RequirePackage{xspace}
 \RequirePackage{enumitem}
 \RequirePackage{xparse}
+\RequirePackage[all]{nowidow}
 
 % REPLACE AUTHOR MACRO
 \def\authors#1{\gdef\@author{#1}}
