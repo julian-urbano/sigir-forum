@@ -9,18 +9,20 @@
 % OVERWRITES FOR THE INSTRUCTIONS ONLY
 \def\pubtype{INSTRUCTIONS}
 % DEFINE METADATA FOR VOLUME AND NUMBER
-\def\pubissue{December 2021}
+\def\pubissue{February 2022}
 
 \begin{document}
 % USE TITLE CASE FOR THE TITLE
 \title{\LaTeX\xspace Class for the SIGIR Forum}
 
-\author{
-Tirthankar Ghosal, Josiane Mothe, Juli\'an Urbano\\SIGIR Forum editors\\\emph{editors\_SIGIR@acm.org}}
+\authors{
+Tirthankar Ghosal, Josiane Mothe, Juli\'an Urbano\\
+SIGIR Forum editors\\
+\small{\texttt{editors\_SIGIR@acm.org}}}
 
 \maketitle 
 \begin{abstract}
-This document contains the instructions for the SIGIR Forum publication template in \LaTeX\xspace as of December 2021. For the latest version, please visit the Github repository.\footnote{\url{https://github.com/julian-urbano/sigir-forum}}
+This document contains the instructions for the SIGIR Forum publication template in \LaTeX\xspace as of February 2022. For the latest version, please visit the Github repository.\footnote{\url{https://github.com/julian-urbano/sigir-forum}}
 \end{abstract}
 
 \section{Publication Type}
@@ -84,7 +86,18 @@ If there is no website, leave it empty:
 
 \section{Authors}
 
-All authors must have an affiliation, and at least one of them must indicate a contact email address. In \textbf{dissertation abstracts}, only the author of the dissertation will appear in the SIGIR Forum publication.
+All authors must have an affiliation including country, and at least one of them must indicate a contact email address. In \textbf{dissertation abstracts}, only the author of the dissertation will appear in the SIGIR Forum publication.
+
+Authors are specified with commands \texttt{\textbackslash authors} and \texttt{\textbackslash author}, as follows:
+\begin{verbatim}
+  \authors{
+    \author[jane.doe@sigir.org]{Jane Doe}{ACM SIGIR}{USA}
+    \and
+    \author{John Doe}{ACM SIGIR}{USA}
+    % \and ...
+  }
+\end{verbatim}
+Note how e-mail addresses are indicated as an optional parameter to \texttt{\textbackslash author}.
 
 \section{Text}
 

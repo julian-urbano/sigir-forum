@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{sigirforum}[2021 SIGIR Forum LaTeX class]
+\ProvidesClass{sigirforum}[2022 SIGIR Forum LaTeX class by Julian Urbano]
 
 % CLASS OPTIONS FOR PUBLICATION TYPE
 \RequirePackage{kvoptions}
@@ -21,7 +21,7 @@
 \ifforum@event\def\pubtype{EVENT REPORT}\else
 \ifforum@opinion\def\pubtype{OPINION PAPER}\else
 \ifforum@dissertation\def\pubtype{DISSERTATION ABSTRACT}\else
-\ClassError{sigirforum}{No publication type defined.}{You need to define a publication type as a class options: news, keynote, paper, event, opinion or dissertation.}
+\ClassError{sigirforum}{No publication type defined.}{You need to define a publication type as a class option: news, keynote, paper, event, opinion or dissertation.}
 \fi\fi\fi\fi\fi\fi
 
 % LOAD BASE CLASS AND REQUIRED PACKAGES
@@ -42,6 +42,14 @@
 \RequirePackage{amsmath}
 \RequirePackage{xspace}
 \RequirePackage{enumitem}
+\RequirePackage{xparse}
+
+% REPLACE AUTHOR MACRO
+\def\authors#1{\gdef\@author{#1}}
+\RenewDocumentCommand{\author}{o m m m}{%
+#2\\[-0.25ex]\small{#3}\\[-0.5ex]\small{#4}%
+\IfValueT{#1}{\\[-0.5ex]\footnotesize\texttt{#1}}%
+}
 
 % SET PAGE SIZE AND REMOVE BETWEEN-ITEM SPACES
 \topmargin -0.8cm
