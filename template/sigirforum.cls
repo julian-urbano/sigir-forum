@@ -32,7 +32,7 @@
 \RequirePackage{lipsum} 
 \RequirePackage{graphicx}
 \RequirePackage{fancyhdr}
-\RequirePackage{url}
+\RequirePackage{xurl}
 \RequirePackage[colorlinks=true,allcolors=blue]{hyperref}
 \RequirePackage[square]{natbib}
 \RequirePackage{fix-cm}

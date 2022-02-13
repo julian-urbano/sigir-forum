@@ -110,22 +110,22 @@ In \textbf{disseration abstracts}, please keep all the text within the \texttt{a
 
 Please refrain from using \href{https://sigir.org}{hidden links like this}. All in-text URLs must be written with the \texttt{\textbackslash url} command, and they should appear in footnotes whenever possible. Exceptions are possible if adding footnotes would harm readability. Please contact the editors if unsure.
 
-It is possible for a URL to span over multiple lines or run over the margins. Please split these multi-line URLs with \texttt{\textbackslash href} and \texttt{\textbackslash linebreak}, as follows:
-\begin{verbatim}
-  \href{<full-url>}
-  {\texttt{<1st-line>}\linebreak
-   \texttt{<2nd-line>}\linebreak
-   ...}
-\end{verbatim}
-
-This will make long URLs\footnote{\url{https://very.long.domain.com/this-is-a-very-long-url-than-runs-over-the-margin-so-we-should-split-it-manually.html}} span over multiple lines and retain the correct hyperlink, such as:\footnote{\href{https://very.long.domain.com/this-is-a-very-long-url-than-runs-over-the-margin-so-we-should-split-it-manually.html}{\texttt{https://very.long.domain.com/this-is-a-very-long-url-than-runs-over-the-margin-}\linebreak\texttt{so-we-should-split-it-manually.html}}}
-\begin{verbatim}
-  \href
-  {https://very.long.domain.com/this-is-a-very-long-url-than-runs-over-the-margin-
-   so-we-should-split-it-manually.html}
-  {\texttt{https://domain.com/this-is-a-very-long-url-than-runs-over-the-margin-}
-   \linebreak\texttt{so-we-should-split-it-manually.html}}
-\end{verbatim}
+%It is possible for a URL to span over multiple lines or run over the margins. Please split these multi-line URLs with \texttt{\textbackslash href} and \texttt{\textbackslash linebreak}, as follows:
+%\begin{verbatim}
+%  \href{<full-url>}
+%  {\texttt{<1st-line>}\linebreak
+%   \texttt{<2nd-line>}\linebreak
+%   ...}
+%\end{verbatim}
+%
+%This will make long URLs\footnote{\url{https://very.long.domain.com/this-is-a-very-long-url-than-runs-over-the-margin-so-we-should-split-it-manually.html}} span over multiple lines and retain the correct hyperlink, such as:\footnote{\href{https://very.long.domain.com/this-is-a-very-long-url-than-runs-over-the-margin-so-we-should-split-it-manually.html}{\texttt{https://very.long.domain.com/this-is-a-very-long-url-than-runs-over-the-margin-}\linebreak\texttt{so-we-should-split-it-manually.html}}}
+%\begin{verbatim}
+%  \href
+%  {https://very.long.domain.com/this-is-a-very-long-url-than-runs-over-the-margin-
+%   so-we-should-split-it-manually.html}
+%  {\texttt{https://domain.com/this-is-a-very-long-url-than-runs-over-the-margin-}
+%   \linebreak\texttt{so-we-should-split-it-manually.html}}
+%\end{verbatim}
 
 Please also refrain from using \texttt{\textbackslash paragraph}. Consider using (sub$^n$)sections or lists.
 
@@ -136,6 +136,11 @@ Please use citations with package \texttt{natbib}\footnote{\url{https://ctan.org
 You can use parenthetical citations like~\citep{forum} through \texttt{\textbackslash citep}, or textual citations like~\citet{forum} through \texttt{\textbackslash citet}.
 
 In \textbf{dissertation abstracts} you can only reference up to five of your own publications, but not someone else's. If you would rather just list the publications but not cite them in the abstract, use command \texttt{\textbackslash nocite}.
+
+\section{Acknowledgments}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Acknowledgments should appear at the end of the manuscript, using \texttt{\textbackslash section*\{Acknowledgments\}}.
 
 \section{Submission}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
