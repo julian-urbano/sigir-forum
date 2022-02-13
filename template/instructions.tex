@@ -26,6 +26,7 @@ This document contains the instructions for the SIGIR Forum publication template
 \end{abstract}
 
 \section{Publication Type}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The publication type is indicated as an option to the class, such as
 \begin{verbatim}
@@ -44,6 +45,7 @@ Currently supported types are:
 If your publication does not fit in these categories, please contact the editors.
 
 \section{Title}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The title of the publication should follow Title Case and is entirely up to the authors, but there are exceptions. In \textbf{event reports}, please follow this template:
 \begin{enumerate}
@@ -54,7 +56,24 @@ The title of the publication should follow Title Case and is entirely up to the 
 
 If your event does not fit in these categories, please contact the editors for suggestions. In \textbf{keynote abstracts}, please follow this template: \textsl{``The Title: A keynote at Foo 2021''}. In \textbf{dissertation abstracts}, please use the same title as in your dissertation.
 
+\section{Authors}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+All authors must have an affiliation including country, and at least one of them must indicate a contact email address. Authors are specified with commands \texttt{\textbackslash authors} and \texttt{\textbackslash author}, as follows:
+\begin{verbatim}
+  \authors{
+    \author[jane.doe@sigir.org]{Jane Doe}{ACM SIGIR}{USA}
+    \and
+    \author{John Doe}{ACM SIGIR}{USA}
+    % \and ...
+  }
+\end{verbatim}
+Note how e-mail addresses are indicated as an optional parameter to \texttt{\textbackslash author}.
+
+In \textbf{dissertation abstracts}, only the author of the dissertation will appear in the SIGIR Forum publication. Please give your current affiliation; the institution granting the doctorate will appear in the metadata.
+
 \section{Metadata}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Update the volume and number metadata in the preamble:
 \begin{verbatim}
@@ -84,28 +103,34 @@ If there is no website, leave it empty:
   \def\dissertationurl{}
 \end{verbatim}
 
-\section{Authors}
-
-All authors must have an affiliation including country, and at least one of them must indicate a contact email address. In \textbf{dissertation abstracts}, only the author of the dissertation will appear in the SIGIR Forum publication.
-
-Authors are specified with commands \texttt{\textbackslash authors} and \texttt{\textbackslash author}, as follows:
-\begin{verbatim}
-  \authors{
-    \author[jane.doe@sigir.org]{Jane Doe}{ACM SIGIR}{USA}
-    \and
-    \author{John Doe}{ACM SIGIR}{USA}
-    % \and ...
-  }
-\end{verbatim}
-Note how e-mail addresses are indicated as an optional parameter to \texttt{\textbackslash author}.
-
 \section{Text}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In \textbf{disseration abstracts}, please keep all the text within the \texttt{abstract} environment; no text is allowed out of it. For other publication types, write an abstract and use sections as usual. There is no page limit, except for \textbf{dissertation abstracts}, which have a limit of one page plus references and metadata.
 
-All in-text URLs must be written with the \texttt{\textbackslash url} command, and they should appear in footnotes whenever possible. Exceptions are possible if adding footnotes would harm readability. Please contact the editors if unsure.
+Please refrain from using \href{https://sigir.org}{hidden links like this}. All in-text URLs must be written with the \texttt{\textbackslash url} command, and they should appear in footnotes whenever possible. Exceptions are possible if adding footnotes would harm readability. Please contact the editors if unsure.
+
+It is possible for a URL to span over multiple lines or run over the margins. Please split these multi-line URLs with \texttt{\textbackslash href} and \texttt{\textbackslash linebreak}, as follows:
+\begin{verbatim}
+  \href{<full-url>}
+  {\texttt{<1st-line>}\linebreak
+   \texttt{<2nd-line>}\linebreak
+   ...}
+\end{verbatim}
+
+This will make long URLs\footnote{\url{https://very.long.domain.com/this-is-a-very-long-url-than-runs-over-the-margin-so-we-should-split-it-manually.html}} span over multiple lines and retain the correct hyperlink, such as:\footnote{\href{https://very.long.domain.com/this-is-a-very-long-url-than-runs-over-the-margin-so-we-should-split-it-manually.html}{\texttt{https://very.long.domain.com/this-is-a-very-long-url-than-runs-over-the-margin-}\linebreak\texttt{so-we-should-split-it-manually.html}}}
+\begin{verbatim}
+  \href
+  {https://very.long.domain.com/this-is-a-very-long-url-than-runs-over-the-margin-
+   so-we-should-split-it-manually.html}
+  {\texttt{https://domain.com/this-is-a-very-long-url-than-runs-over-the-margin-}
+   \linebreak\texttt{so-we-should-split-it-manually.html}}
+\end{verbatim}
+
+Please also refrain from using \texttt{\textbackslash paragraph}. Consider using (sub$^n$)sections or lists.
 
 \section{Citations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Please use citations with package \texttt{natbib}\footnote{\url{https://ctan.org/pkg/natbib?lang=en}}.
 You can use parenthetical citations like~\citep{forum} through \texttt{\textbackslash citep}, or textual citations like~\citet{forum} through \texttt{\textbackslash citet}.
@@ -113,6 +138,7 @@ You can use parenthetical citations like~\citep{forum} through \texttt{\textback
 In \textbf{dissertation abstracts} you can only reference up to five of your own publications, but not someone else's. If you would rather just list the publications but not cite them in the abstract, use command \texttt{\textbackslash nocite}.
 
 \section{Submission}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 You can submit your publication via email to \url{editors\_SIGIR@acm.org}. Please include all the source \LaTeX\xspace files and a compiled PDF.
 
