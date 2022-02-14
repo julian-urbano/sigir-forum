@@ -86,7 +86,7 @@ Some publications have special formatting for metadata. In \textbf{event reports
   \def\eventdate{10--14 September, 2021}
   \def\eventurl{https://foo2021.net}
 \end{verbatim}
-If there is no website, leave it empty:
+If your event does not have a website, leave \texttt{\textbackslash eventurl} empty:
 \begin{verbatim}
   \def\eventurl{}
 \end{verbatim}
@@ -129,13 +129,15 @@ Please refrain from using \href{https://sigir.org}{hidden links like this}. All 
 
 Please also refrain from using \texttt{\textbackslash paragraph}. Consider using (sub$^n$)sections or lists.
 
-\section{Citations}
+\section{References and Citations}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Please use citations with package \texttt{natbib}\footnote{\url{https://ctan.org/pkg/natbib?lang=en}}.
 You can use parenthetical citations like~\citep{forum} through \texttt{\textbackslash citep}, or textual citations like~\citet{forum} through \texttt{\textbackslash citet}.
 
 In \textbf{dissertation abstracts} you can only reference up to five of your own publications, but not someone else's. If you would rather just list the publications but not cite them in the abstract, use command \texttt{\textbackslash nocite}.
+
+Please use a \texttt{.bib} file for the references; do not manually include the \texttt{\textbackslash bibitem}s in the \texttt{.tex} source.
 
 \section{Acknowledgments}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
