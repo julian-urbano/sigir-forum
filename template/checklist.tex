@@ -1,0 +1,120 @@
+% CHOOSE A PUBLICATION TYPE
+\documentclass[news]{sigirforum}
+\def\pubtype{INSTRUCTIONS}
+\def\pubissue{February 2022}
+
+\usepackage{amssymb}
+\newlist{checklist}{enumerate}{2}
+\setlist[checklist]{label={$\square$},topsep=0pt,noitemsep,after=\vspace{0pt}}
+
+\begin{document}
+\title{SIGIR Forum Submission Checklist}
+
+%\authors{
+%Tirthankar Ghosal, Josiane Mothe, Juli\'an Urbano\\
+%SIGIR Forum editors\\
+%\small{\texttt{editors\_SIGIR@acm.org}}}
+\maketitle 
+\sloppy
+\vspace{-1.5cm}
+This document presents a list of items to check that a manuscript follows the SIGIR Forum template. Please check all items before you make a submission.
+Note that the sections below contain a reference to the relevant section in the instructions document.\footnote{\url{https://github.com/julian-urbano/sigir-forum/raw/master/template/instructions.pdf}}
+
+\subsection*{Template and Publication Type ($\S1$)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{checklist}
+\item Use the last version of the template, available from \url{https://sigir.org/forum}.
+\item Valid publication type through \texttt{\textbackslash documentclass}.
+\end{checklist}
+
+\subsection*{Title ($\S2$)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{checklist}
+\item Use Title Case for the Title.
+\item Event reports:
+	\begin{checklist}
+	\item Use the appropriate boilerplate title.
+	\end{checklist}
+\item Keynote abstracts:
+	\begin{checklist}
+	\item Use the appropriate boilerplate title.
+	\end{checklist}
+\item Dissertation abstracts:
+	\begin{checklist}
+	\item Use the same title as in the PhD dissertation.
+	\end{checklist}
+\end{checklist}
+
+\subsection*{Authors ($\S3$)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{checklist}
+\item Use commands \texttt{\textbackslash authors} and \texttt{\textbackslash author}.
+\item All authors have affiliation and country.
+\item At least one author has an e-mail address.
+\item Dissertation abstracts:
+	\begin{checklist}
+	\item The doctoral student is the only author.
+	\end{checklist}
+\end{checklist}
+
+\subsection*{Metadata ($\S4,7$)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{checklist}
+\item Correct issue number through \texttt{\textbackslash pubissue}.
+\item Event reports:
+	\begin{checklist}
+	\item Full date(s) through \texttt{\textbackslash eventdate} and well formatted.
+	\item Website URL through  \texttt{\textbackslash eventurl}.
+	\end{checklist}
+\item Dissertation abstracts:
+	\begin{checklist}
+	\item Granting institution through \texttt{\textbackslash dissertationplace} and well formatted.
+	\item Full defense date through \texttt{\textbackslash dissertationdate} and well formatted.
+	\item Supervisor(s) through \texttt{\textbackslash dissertationsupervisor} and well formatted.
+	\item URL to the PDF file or similar through \texttt{\textbackslash dissertationurl}.
+	\end{checklist}
+\end{checklist}
+
+\subsection*{Text ($\S5$)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{checklist}
+\item No \href{https://#}{hidden links like this}.
+\item URLs written with \texttt{\textbackslash url}.
+\item URLs as footnotes.
+\item No use of \texttt{\textbackslash paragraph}.
+\item Acknowledgments under an unnumbered section using \texttt{\textbackslash section*\{Acknowledgments\}}.
+\item Dissertation abstracts:
+	\begin{checklist}
+	\item All the text is within the \texttt{abstract} environment.
+	\item 1-page limit, plus references and metadata.
+	\end{checklist}
+\end{checklist}
+
+\subsection*{References and Citations ($\S6$)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{checklist}
+\item Use \texttt{\textbackslash citep} and \texttt{\textbackslash citet} only.
+\item Use a \texttt{.bib} file for references.
+\item Dissertation abstracts:
+	\begin{checklist}
+	\item Only own references, and up to 5.
+	\end{checklist}
+\end{checklist}
+
+\subsection*{Submission ($\S8$)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{checklist}
+\item Include all source files.
+\item Include compiled PDF file.
+\item All items in this checklist are checked.
+\item Send all files via email to \url{editors\_SIGIR@acm.org}.
+\end{checklist}
+
+\end{document}
