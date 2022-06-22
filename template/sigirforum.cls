@@ -46,10 +46,11 @@
 \RequirePackage[all]{nowidow}
 
 % REPLACE AUTHOR MACRO
+\ExplSyntaxOn
 \def\authors#1{\gdef\@author{#1}}
 \RenewDocumentCommand{\author}{o m m m}{%
 #2\\[-0.25ex]\small{#3}\\[-0.5ex]\small{#4}%
-\IfValueT{#1}{\\[-0.5ex]\footnotesize\texttt{#1}}%
+\IfValueT{#1}{\tl_if_empty:nF{#1}{\\[-0.5ex]\footnotesize\texttt{#1}}}%
 }
 
 % SET PAGE SIZE AND REMOVE BETWEEN-ITEM SPACES
