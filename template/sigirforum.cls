@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{sigirforum}[SIGIR Forum LaTeX class v1.0 (Feb 2022) by Julian Urbano <urbano.julian@gmail.com>]
+\ProvidesClass{sigirforum}[SIGIR Forum LaTeX class v1.1 (Sep 2022) by Julian Urbano <urbano.julian@gmail.com>]
 
 % CLASS OPTIONS FOR PUBLICATION TYPE
 \RequirePackage{kvoptions}
@@ -64,7 +64,7 @@
 % PAGE HEAD AND FOOT
 \pagestyle{fancyplain}
 \fancyhead{}
-\fancyfoot[L]{ACM SIGIR Forum}
+\fancyfoot[L]{ACM~SIGIR~Forum}
 \fancyfoot[C]{\thepage}
 \fancyfoot[R]{\pubissue}
 \renewcommand\plainheadrulewidth{1pt}

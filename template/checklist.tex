@@ -1,7 +1,7 @@
 % CHOOSE A PUBLICATION TYPE
 \documentclass[news]{sigirforum}
 \def\pubtype{\mbox{\TextField[width={15cm},height=.5cm,bordercolor={black},borderwidth=0pt]{Submission:}}}
-\def\pubissue{v1.0 -- February 2022}
+\def\pubissue{v1.1 -- September 2022}
 
 \usepackage{amssymb}
 \usepackage{tikz}
@@ -11,7 +11,7 @@
 \newcommand{\cb}[1]{
 	\stepcounter{checkboxcounter}%
 	\item\mbox{\CheckBox[name={\roman{checkboxcounter}},%
-			  width={3mm},height={3mm},%
+			  width={2.8mm},height={2.8mm},%
 			  bordercolor={black},borderwidth=0.5pt]{~}}%
 	{#1}}
 
@@ -19,7 +19,7 @@
 \setlist[checklist]{label={},labelindent=.5cm,leftmargin=*,topsep=0pt,noitemsep,after=\vspace{0pt}}
 
 \begin{document}
-\title{SIGIR Forum Submission Checklist}
+\title{\vspace{-0.2cm}SIGIR Forum Submission Checklist}
 
 %\authors{
 %Tirthankar Ghosal, Josiane Mothe, Juli\'an Urbano\\
@@ -27,9 +27,8 @@
 %\small{\texttt{editors\_SIGIR@acm.org}}}
 \maketitle 
 \sloppy
-\vspace{-1.5cm}
-This document presents a list of items to check that a manuscript follows the SIGIR Forum template. Please check all items before you make a submission.
-Note that the sections below contain a reference to the relevant section in the instructions document.\footnote{\url{https://github.com/julian-urbano/sigir-forum/raw/master/template/instructions.pdf}}
+\vspace{-1.6cm}
+This interactive\footnote{We advise using Acrobat Reader or similar, as some browsers do not properly render the checkboxes.} document presents a list of items to check that a manuscript follows the SIGIR Forum template. Please check all items before you make a submission. Note that the sections below contain a reference to the relevant section in the instructions document.\footnote{\url{https://github.com/julian-urbano/sigir-forum/raw/master/template/instructions.pdf}}
 
 \begin{Form}
 
