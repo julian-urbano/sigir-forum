@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{sigirforum}[SIGIR Forum LaTeX class v1.1 (Sep 2022) by Julian Urbano <urbano.julian@gmail.com>]
+\ProvidesClass{sigirforum}[SIGIR Forum LaTeX class v1.1.1 (Oct 2022) by Julian Urbano <urbano.julian@gmail.com>]
 
 % CLASS OPTIONS FOR PUBLICATION TYPE
 \RequirePackage{kvoptions}
@@ -52,6 +52,7 @@
 #2\\[-0.25ex]\small{#3}\\[-0.5ex]\small{#4}%
 \IfValueT{#1}{\tl_if_empty:nF{#1}{\\[-0.5ex]\footnotesize\texttt{#1}}}%
 }
+\ExplSyntaxOff
 
 % SET PAGE SIZE AND REMOVE BETWEEN-ITEM SPACES
 \topmargin -0.8cm
@@ -64,7 +65,7 @@
 % PAGE HEAD AND FOOT
 \pagestyle{fancyplain}
 \fancyhead{}
-\fancyfoot[L]{ACM~SIGIR~Forum}
+\fancyfoot[L]{ACM SIGIR Forum}
 \fancyfoot[C]{\thepage}
 \fancyfoot[R]{\pubissue}
 \renewcommand\plainheadrulewidth{1pt}

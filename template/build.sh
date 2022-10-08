@@ -1,5 +1,8 @@
 #! /bin/bash
 
+mkdir zip
+mkdir zip/samples
+
 cp -f sample.tex zip/samples/
 cp -f sample.pdf zip/samples/
 cp -f sample_event.tex zip/samples/
