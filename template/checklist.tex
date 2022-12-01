@@ -5,6 +5,8 @@
 
 \usepackage{amssymb}
 \usepackage{tikz}
+\usepackage{fontsize}
+\changefontsize{11pt}
 
 \newcounter{checkboxcounter}
 \def\LayoutCheckField#1#2{#2 #1}
@@ -28,7 +30,7 @@
 \maketitle 
 \sloppy
 \vspace{-1.6cm}
-This interactive\footnote{We advise using Acrobat Reader or similar, as some browsers do not properly render the checkboxes.} document presents a list of items to check that a manuscript follows the SIGIR Forum template. Please check all items before you make a submission. Note that the sections below contain a reference to the relevant section in the instructions document.\footnote{\url{https://github.com/julian-urbano/sigir-forum/raw/master/template/instructions.pdf}}
+\noindent This interactive\footnote{We advise using Acrobat Reader or similar, as some browsers do not properly render the checkboxes.} document presents a list of items to check that a manuscript follows the SIGIR Forum template. Please check all items before you make a submission. Note that the sections below contain a reference to the relevant section in the instructions document.\footnote{\url{https://github.com/julian-urbano/sigir-forum/raw/master/template/instructions.pdf}}
 
 \begin{Form}
 
@@ -36,7 +38,7 @@ This interactive\footnote{We advise using Acrobat Reader or similar, as some bro
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{checklist}
-\cb{Use the last version of the template, available from \url{https://sigir.org/forum}.}
+\cb{Use the latest version of the template, available from \url{https://sigir.org/forum}.}
 \cb{Valid publication type through \texttt{\textbackslash documentclass}.}
 \end{checklist}
 
@@ -82,6 +84,10 @@ This interactive\footnote{We advise using Acrobat Reader or similar, as some bro
 	\cb{Full date(s) through \texttt{\textbackslash eventdate} and well formatted.}
 	\cb{Website URL through  \texttt{\textbackslash eventurl}.}
 	\end{checklist}
+\cb{Keynote abstracts:}
+	\begin{checklist}
+	\cb{Full date through \texttt{\textbackslash keynotedate} and well formatted.}
+	\end{checklist}
 \cb{Dissertation abstracts:}
 	\begin{checklist}
 	\cb{Granting institution through \texttt{\textbackslash dissertationplace} and well formatted.}
@@ -123,14 +129,13 @@ This interactive\footnote{We advise using Acrobat Reader or similar, as some bro
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{checklist}
-\cb{Include all source files.}
-\cb{Include compiled PDF file.}
 \cb{All items in this checklist are checked.}
+\cb{Include all source files, compiled PDF file, and this checklist file.}
 \cb{Send all files via email to \url{editors\_SIGIR@acm.org}.}
 \end{checklist}
 
 \subsection*{Comments}
-\TextField[multiline,width={17cm},height={9cm},bordercolor={black},borderwidth=0.5pt]{~}
+\TextField[multiline,width={17cm},height={11cm},bordercolor={black},borderwidth=0.5pt]{~}
 
 \end{Form}
 

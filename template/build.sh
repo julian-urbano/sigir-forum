@@ -7,6 +7,8 @@ cp -f sample.tex zip/samples/
 cp -f sample.pdf zip/samples/
 cp -f sample_event.tex zip/samples/
 cp -f sample_event.pdf zip/samples/
+cp -f sample_keynote.tex zip/samples/
+cp -f sample_keynote.pdf zip/samples/
 cp -f sample_phd.tex zip/samples/
 cp -f sample_phd.pdf zip/samples/
 

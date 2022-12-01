@@ -105,10 +105,10 @@
 	}
 	{%
 		\par\vspace{1.5\baselineskip}%
-		\noindent\textbf{Awarded by:} \dissertationplace\xspace\textbf{on} \dissertationdate.\par%
-		\noindent\textbf{Supervised by:} \dissertationsupervisor.%
+		\noindent\textbf{Awarded by:~}\dissertationplace\xspace\textbf{on} \dissertationdate.\par%
+		\noindent\textbf{Supervised by:~}\dissertationsupervisor.%
 		\ifdefstring{\dissertationurl}{}{}{%
-			\par\noindent\textbf{Available at:} \url{\dissertationurl}.%
+			\par\noindent\textbf{Available at:~}\url{\dissertationurl}.%
 		}%
 	}
 	\renewcommand{\refname}{Selected Publications}
@@ -119,12 +119,17 @@
 		\end{center}\quote%
 	}
 	{%
+		% KEYNOTES ADD METADATA
+		\ifforum@keynote
+			\par%
+			\noindent\textbf{Date:~}\keynotedate.%
+		\fi
 		% EVENT REPORTS ADD METADATA
 		\ifforum@event
 			\par%
-			\noindent\textbf{Date:} \eventdate.%
+			\noindent\textbf{Date:~}\eventdate.%
 			\ifdefstring{\eventurl}{}{}{%
-				\par\noindent\textbf{Website:} \url{\eventurl}.%
+				\par\noindent\textbf{Website:~}\url{\eventurl}.%
 			}%
 		\fi
 		\endquote%

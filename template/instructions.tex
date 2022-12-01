@@ -30,7 +30,7 @@ This document contains the instructions for the SIGIR Forum publication template
 
 The publication type is indicated as an option to the class, such as
 \begin{verbatim}
-  \documentclass[news]{sigirforum}
+    \documentclass[news]{sigirforum}
 \end{verbatim}
 Currently supported types are:
 \begin{itemize}
@@ -61,12 +61,12 @@ If your event does not fit in these categories, please contact the editors for s
 
 All authors must have an affiliation including country, and at least one of them must indicate a contact email address. Authors are specified with commands \texttt{\textbackslash authors} and \texttt{\textbackslash author}, as follows:
 \begin{verbatim}
-  \authors{
-    \author[jane.doe@sigir.org]{Jane Doe}{ACM SIGIR}{USA}
-    \and
-    \author{John Doe}{ACM SIGIR}{USA}
-    % \and ...
-  }
+    \authors{
+      \author[jane.doe@sigir.org]{Jane Doe}{ACM SIGIR}{USA}
+      \and
+      \author{John Doe}{ACM SIGIR}{USA}
+      % \and ...
+    }
 \end{verbatim}
 Note how e-mail addresses are indicated as an optional parameter to \texttt{\textbackslash author}.
 
@@ -77,30 +77,35 @@ In \textbf{dissertation abstracts}, only the author of the dissertation will app
 
 Update the volume and number metadata in the preamble:
 \begin{verbatim}
-  \def\pubissue{Vol. 55 No. 2 December 2021}
+    \def\pubissue{Vol. 55 No. 2 December 2021}
 \end{verbatim}
 If unsure, please contact the editors.
 
 Some publications have special formatting for metadata. In \textbf{event reports}, please indicate in the preamble the date(s) of the event and the URL of its website:
 \begin{verbatim}
-  \def\eventdate{10--14 September, 2021}
-  \def\eventurl{https://foo2021.net}
+    \def\eventdate{10--14 September 2021}
+    \def\eventurl{https://foo2021.net}
 \end{verbatim}
 If your event does not have a website, leave \texttt{\textbackslash eventurl} empty:
 \begin{verbatim}
-  \def\eventurl{}
+    \def\eventurl{}
+\end{verbatim}
+
+In \textbf{keynote abstracts}, please indicate the date:
+\begin{verbatim}
+    \def\keynotedate{10 September 2021}
 \end{verbatim}
 
 In \textbf{dissertation abstracts}, please indicate the institution that granted the degree, the defense date, the name(s) of the supervisor(s) without titles (ie. no \textsl{Dr.} or \textsl{Prof.}), and a URL to access the dissertation:
 \begin{verbatim}
-  \def\dissertationplace{University of SIGIR, City, Country}
-  \def\dissertationdate{1 January 1970}
-  \def\dissertationsupervisor{Leslie Lamport}
-  \def\dissertationurl{https://name.domain/thesis-file.pdf}
+    \def\dissertationplace{University of SIGIR, City, Country}
+    \def\dissertationdate{1 January 1970}
+    \def\dissertationsupervisor{Leslie Lamport}
+    \def\dissertationurl{https://name.domain/thesis-file.pdf}
 \end{verbatim}
 If there is no website, leave it empty:
 \begin{verbatim}
-  \def\dissertationurl{}
+    \def\dissertationurl{}
 \end{verbatim}
 
 \section{Text}
