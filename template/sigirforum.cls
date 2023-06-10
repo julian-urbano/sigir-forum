@@ -46,11 +46,17 @@
 \RequirePackage[all]{nowidow}
 
 % REPLACE AUTHOR MACRO
+\def\forum@pdfauthors{}
 \ExplSyntaxOn
 \def\authors#1{\gdef\@author{#1}}
 \RenewDocumentCommand{\author}{o m m m}{%
-#2\\[-0.25ex]\small{#3}\\[-0.5ex]\small{#4}%
-\IfValueT{#1}{\tl_if_empty:nF{#1}{\\[-0.5ex]\footnotesize\texttt{#1}}}%
+	\ifdefstring{\forum@pdfauthors}{}{%
+		\g@addto@macro\forum@pdfauthors{#2}%
+	}{%
+		\g@addto@macro\forum@pdfauthors{,~#2}%
+	}%
+	#2\\[-0.25ex]\small{#3}\\[-0.5ex]\small{#4}%
+	\IfValueT{#1}{\tl_if_empty:nF{#1}{\\[-0.5ex]\footnotesize\texttt{#1}}}%
 }
 \ExplSyntaxOff
 
@@ -94,6 +100,8 @@
   \end{center}%
   \par
   \vskip 1.5em%
+%Set PDF metadata
+\hypersetup{pdftitle=\@title,pdfsubject=\pubtype,pdfauthor=\forum@pdfauthors}
 }
 
 % DISSERTATION ABSTRACTS REDEFINE THE ABSTRACT ENVIRONMENT, ADD METADATA AND RENAME THE BIBLIOGRAPHY SECTION
