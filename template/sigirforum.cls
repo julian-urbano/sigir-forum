@@ -44,6 +44,7 @@
 \RequirePackage{enumitem}
 \RequirePackage{xparse}
 \RequirePackage[all]{nowidow}
+\RequirePackage[font=small,labelfont=bf,labelsep=period]{caption}
 
 % REPLACE AUTHOR MACRO
 \def\forum@pdfauthors{}
