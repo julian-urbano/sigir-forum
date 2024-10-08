@@ -1,0 +1,70 @@
+% CHOOSE A PUBLICATION TYPE
+%\documentclass[news]{sigirforum}
+%\documentclass[keynote]{sigirforum}
+\documentclass[paper]{sigirforum}
+%\documentclass[event]{sigirforum}
+%\documentclass[opinion]{sigirforum}
+%\documentclass[dissertation]{sigirforum}
+
+% DEFINE METADATA FOR VOLUME AND NUMBER
+\def\pubissue{Vol. 58 No. 1 -- June 2024}
+
+% DEFINE METADATA FOR KEYNOTE ABSTRACTS
+%\def\keynotedate{10 September 2021}
+
+% DEFINE METADATA FOR EVENT REPORTS
+%\def\eventdate{10--14 September 2021}
+%\def\eventurl{https://foo2021.net}
+
+% DEFINE METADATA FOR DISSERTATION ABSTRACTS
+%\def\dissertationplace{University of SIGIR, City, Country}
+%\def\dissertationdate{1 January 1970} % date of defense
+%\def\dissertationsupervisor{Leslie Lamport} % <first> <last>, without titles
+%\def\dissertationurl{https://name.domain/thesis-file.pdf}
+
+\begin{document}
+% USE TITLE CASE FOR THE TITLE
+\title{Sample SIGIR Article with Many Authors}
+
+\authors{
+\author[jane.doe@sigir.org]{Jane Doe}{ACM SIGIR}{USA}
+\and
+\author{John Doe}{ACM SIGIR}{USA}
+\and
+\authorothers{Alice Roe, Bob Bloggs, Carol Smith, Dan Doe, Erin Roe, Frank Bloggs, Grace Smith, Heidi Doe, Ivan Roe, Judy Bloggs and Mike Smith}
+}
+
+\maketitle 
+\begin{abstract}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\end{abstract}
+
+\section{Introduction}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum \citep{forum}.
+
+\appendixauthorothers
+
+\textbf{First author tier:}
+\begin{itemize}
+	\item Jane Doe, ACM SIGIR, USA.
+	\item John Doe, ACM SIGIR, USA.
+\end{itemize}
+
+\textbf{Second author tier:}
+\begin{itemize}
+	\item Alice Roe, ACM, USA.
+	\item Bob Bloggs, ACM, USA.
+	\item Carol Smith, ACM, USA.
+	\item Dan Doe, ACM, USA.
+	\item Erin Roe, ACM, USA.
+	\item Frank Bloggs, ACM, USA.
+	\item Grace Smith, ACM, USA.
+	\item Heidi Doe, ACM, USA.
+	\item Ivan Roe, ACM, USA.
+	\item Judy Bloggs, ACM, USA.
+	\item Mike Smith, ACM, USA.
+\end{itemize}
+
+\bibliography{sigirforum}
+\end{document}

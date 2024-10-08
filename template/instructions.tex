@@ -9,7 +9,7 @@
 % OVERWRITES FOR THE INSTRUCTIONS ONLY
 \def\pubtype{INSTRUCTIONS}
 % DEFINE METADATA FOR VOLUME AND NUMBER
-\def\pubissue{v1.2 -- June 2023}
+\def\pubissue{v1.2 -- Jun 2023}
 
 \begin{document}
 % USE TITLE CASE FOR THE TITLE
@@ -22,7 +22,7 @@ SIGIR Forum editors\\
 
 \maketitle 
 \begin{abstract}
-This document contains the instructions for the SIGIR Forum publication template in \LaTeX\xspace as of version 1.1.1, October 2022. For the latest version, please visit the Github repository.\footnote{\url{https://github.com/julian-urbano/sigir-forum}}
+This document contains the instructions for the SIGIR Forum publication template in \LaTeX\xspace as of version 1.2, June 2023. For the latest version, please visit the Github repository.\footnote{\url{https://github.com/julian-urbano/sigir-forum}}
 \end{abstract}
 
 \section{Publication Type}
@@ -62,15 +62,41 @@ If your event does not fit in these categories, please contact the editors for s
 All authors must have an affiliation including country, and at least one of them must indicate a contact email address. Authors are specified with commands \texttt{\textbackslash authors} and \texttt{\textbackslash author}, as follows:
 \begin{verbatim}
     \authors{
-      \author[jane.doe@sigir.org]{Jane Doe}{ACM SIGIR}{USA}
-      \and
-      \author{John Doe}{ACM SIGIR}{USA}
-      % \and ...
+        \author[jane.doe@sigir.org]{Jane Doe}{ACM SIGIR}{USA}
+        \and
+        \author{John Doe}{ACM SIGIR}{USA}
+        % \and ...
     }
 \end{verbatim}
 Note how e-mail addresses are indicated as an optional parameter to \texttt{\textbackslash author}.
 
-In \textbf{dissertation abstracts}, only the author of the dissertation will appear in the SIGIR Forum publication. Please give your current affiliation; the institution granting the doctorate will appear in the metadata.
+The front page may easily clutter if there are dozens of authors. In these cases, you can list the first few authors and their affiliations as detailed above, and then use \texttt{\textbackslash authorothers} to list the remaining authors \textsl{only by their names}. This will automatically create a link to an appendix for you to list \textsl{all} affiliations in full:
+\begin{verbatim}
+    \authors{
+        \author[jane.doe@sigir.org]{Jane Doe}{ACM SIGIR}{USA}
+        \and
+        \author{John Doe}{ACM SIGIR}{USA}
+        \and
+        \authorothers{Alice Roe, Bob Bloggs, Carol Smith, Dan Doe,
+            Erin Roe, Frank Bloggs, Grace Smith, Heidi Doe, Ivan Roe,
+            Judy Bloggs and Mike Smith}
+    }
+    
+    % ...
+    
+    \appendixauthorothers
+    
+    \begin{itemize}
+        \item Jane Doe, ACM SIGIR, USA.
+        \item John Doe, ACM SIGIR, USA.
+        \item Alice Roe, ACM, USA.
+        \item Bob Bloggs, ACM, USA.
+        % ...
+    \end{itemize}
+\end{verbatim}
+This is helpful for example in event reports where both organizers and participants contribute to the SIGIR Forum report; they are all authors of the report, but a distinction of roles can be made in the appendix. Make this appendix the last one of the manuscript.
+
+In \textbf{dissertation abstracts}, only the author of the dissertation will appear in the SIGIR Forum publication. Please give your current affiliation; the institution granting the doctorate already appears in the metadata.
 
 \section{Metadata}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

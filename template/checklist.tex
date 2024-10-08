@@ -65,8 +65,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{checklist}
-\cb{Use commands \texttt{\textbackslash authors} and \texttt{\textbackslash author}.}
-\cb{All authors have affiliation and country.}
+\cb{Use commands \texttt{\textbackslash authors} and \texttt{\textbackslash author}. In case of too many authors, use \texttt{\textbackslash authorothers} as well.}
+\cb{All authors have affiliation and country (if using \texttt{\textbackslash authorothers}, use \texttt{\textbackslash appendixauthorothers}).}
 \cb{At least one author has an e-mail address.}
 \cb{Dissertation abstracts:}
 	\begin{checklist}
@@ -74,7 +74,7 @@
 	\end{checklist}
 \end{checklist}
 
-\subsection*{Metadata ($\S4,7$)}
+\subsection*{Metadata ($\S4$)}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{checklist}
@@ -97,7 +97,7 @@
 	\end{checklist}
 \end{checklist}
 
-\subsection*{Text ($\S5$)}
+\subsection*{Text ($\S5,\S7$)}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{checklist}
@@ -105,12 +105,12 @@
 \cb{URLs written with \texttt{\textbackslash url}.}
 \cb{URLs as footnotes.}
 \cb{No use of \texttt{\textbackslash paragraph}.}
-\cb{Acknowledgments under an unnumbered section using \texttt{\textbackslash section*\{Acknowledgments\}}.}
 \cb{Dissertation abstracts:}
 	\begin{checklist}
 	\cb{All the text is within the \texttt{abstract} environment.}
 	\cb{1-page limit, plus references and metadata.}
 	\end{checklist}
+\cb{Acknowledgments under an unnumbered section using \texttt{\textbackslash section*\{Acknowledgments\}}.}
 \end{checklist}
 
 \subsection*{References and Citations ($\S6$)}
@@ -141,4 +141,6 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\nocite{*}
+\bibliography{sigirforum}
 \end{document}

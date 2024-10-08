@@ -33,7 +33,7 @@
 \RequirePackage{graphicx}
 \RequirePackage{fancyhdr}
 \RequirePackage{xurl}
-\RequirePackage[colorlinks=true,allcolors=blue]{hyperref}
+\RequirePackage[colorlinks=true,allcolors=blue,hypertexnames=false]{hyperref}
 \RequirePackage[square]{natbib}
 \RequirePackage{fix-cm}
 \RequirePackage{graphicx}
@@ -45,6 +45,7 @@
 \RequirePackage{xparse}
 \RequirePackage[all]{nowidow}
 \RequirePackage[font=small,labelfont=bf,labelsep=period]{caption}
+\RequirePackage{hyphenat}
 
 % REPLACE AUTHOR MACRO
 \def\forum@pdfauthors{}
@@ -60,6 +61,30 @@
 	\IfValueT{#1}{\tl_if_empty:nF{#1}{\\[-0.5ex]\footnotesize\texttt{#1}}}%
 }
 \ExplSyntaxOff
+% OTHER AUTHORS
+\newif\ifauthorothers\authorothersfalse% to know whether to print the footnote or not
+\NewDocumentCommand{\authorothers}{m}{%
+	\g@addto@macro\forum@pdfauthors{,~#1}%
+	\begin{minipage}{17cm}\vspace{.5ex}\begin{center}\nohyphens{#1}$^\ast$\end{center}\end{minipage}%
+	\global\authorotherstrue%
+}
+
+\newif\ifappendix\appendixfalse% to know whether \appendix has been called or not
+\renewcommand{\appendix}{
+	\unless\ifappendix\par%
+		\setcounter{section}{0}%
+		\setcounter{subsection}{0}%
+		\gdef\thesection{\@Alph\c@section}
+		\appendixtrue
+	\fi%
+}
+
+\newcommand{\appendixauthorothers}{%
+	\unless\ifauthorothers%
+		\ClassError{sigirforum}{\noexpand\appendixauthorothers can only be used if multiple authors are first defined via \noexpand\authorothers.}%
+	\fi
+	\appendix\section{Authors and Affiliations}\label{app:authorothers}%
+}
 
 % SET PAGE SIZE AND REMOVE BETWEEN-ITEM SPACES
 \topmargin -0.8cm
@@ -82,6 +107,7 @@
 
 % TITLE
 \def\@maketitle{%
+  \setcounter{footnote}{1}% so that otherauthors footnote always uses the star
   \newpage
   \null
   \vskip 2em
@@ -99,6 +125,7 @@
     \vskip 1em%
     {\large}%
   \end{center}%
+  \ifauthorothers\footnotetext[1]{Affiliation not shown for all authors due to space limitations (see Appendix~\ref{app:authorothers} for details).}\fi%
   \par
   \vskip 1.5em%
 %Set PDF metadata
