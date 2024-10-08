@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{sigirforum}[SIGIR Forum LaTeX class v1.2 (Jun 2023) by Julian Urbano <urbano.julian@gmail.com>]
+\ProvidesClass{sigirforum}[SIGIR Forum LaTeX class v1.3 (Oct 2024) by Julian Urbano <urbano.julian@gmail.com>]
 
 % CLASS OPTIONS FOR PUBLICATION TYPE
 \RequirePackage{kvoptions}
