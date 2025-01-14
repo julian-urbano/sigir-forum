@@ -1,6 +1,6 @@
 # UPDATE THESE TWO
-issue <- "June 2024, Volume 58 Number 1"
-pdfpath <- "https://sigir.org/wp-content/uploads/2024/07/"
+issue <- "December 2024, Volume 58 Number 2"
+pdfpath <- "https://sigir.org/wp-content/uploads/2025/01/"
 
 suppressWarnings(suppressMessages({
   library(glue)
@@ -26,12 +26,12 @@ for(f in list.files(".", pattern = "p\\d+.pdf")) {
     stop(glue("No metadata in {f}"))
   
   if(is.null(prev_pubtype)) {
-    cat(glue("<h1>SIGIR Forum<br />{issue}</h1>"), "\n")
-    cat("<h2>Table of Contents</h2>", "\n")
+    cat(glue("<h1>SIGIR Forum\n{issue}</h1>"), "\n\n")
+    cat("<h2>Table of Contents</h2>", "\n\n")
   }
   if(is.null(prev_pubtype) || prev_pubtype != the_pubtype) {
     prev_pubtype <- the_pubtype
-    cat(glue("<h3>{pubtypes[[the_pubtype]]}</h3>"), "\n")
+    cat(glue("<h3>{pubtypes[[the_pubtype]]}</h3>"), "\n\n")
   }
-  cat(glue('<p><a href="{pdfpath}{f}">{htmlEscape(the_title)}</a>\n   <br />{htmlEscape(the_authors)}</p>'), "\n")
+  cat(glue('<a href="{pdfpath}{f}">{htmlEscape(the_title)}</a>\n   {htmlEscape(the_authors)}'), "\n\n")
 }
