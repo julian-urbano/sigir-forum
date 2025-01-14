@@ -4,12 +4,25 @@
 PDFLATEX='/mnt/c/Program Files/MiKTeX/miktex/bin/x64/pdflatex.exe'
 BIBTEX='/mnt/c/Program Files/MiKTeX/miktex/bin/x64/bibtex.exe'
 
-# cleanup
-rm -f *.pdf *.aux *.bbl *.blg *.log *.out *.synctex.gz
+# ask for template's version and date
+echo 'Version? '
+read sigirforumversion
+echo 'Date? '
+read sigirforumdate
+
+embed () { # source, target
+	sed "s/{{SIGIRFORUMVERSION}}/${sigirforumversion}/g" $1 | sed "s/{{SIGIRFORUMDATE}}/${sigirforumdate}/g" > $2
+}
 
 # initialize folders
 rm -f -R zip/*
 mkdir -p zip/samples
+
+# class file and bib
+echo "##### template #####"
+
+embed sigirforum.cls zip/sigirforum.cls
+cp sigirforum.bib zip/
 
 # instructions: pdflatex+bibtex -> pdf
 # checklist: pdflatex -> pdf
@@ -17,33 +30,30 @@ mkdir -p zip/samples
 for f in instructions checklist sample sample_event sample_keynote sample_manyauthors sample_phd
 do
 	echo "##### $f #####"
-	"${PDFLATEX}" -quiet $f
+	embed $f.tex zip/$f.tex
+	"${PDFLATEX}" -quiet -output-directory=zip zip/$f
 	if [[ $f != "checklist" ]]
 	then
-		"${BIBTEX}" -quiet $f
-		"${PDFLATEX}" -quiet $f
-		"${PDFLATEX}" -quiet $f
+		"${BIBTEX}" -quiet zip/$f
+		"${PDFLATEX}" -quiet -output-directory=zip  zip/$f
+		"${PDFLATEX}" -quiet -output-directory=zip  zip/$f
 	fi
 
 	if [[ $f == sample* ]]
 	then
-		cp -f $f.tex $f.pdf zip/samples/
+		mv zip/$f.tex zip/$f.pdf zip/samples/
 	else
-		cp -f $f.pdf zip/
+		rm zip/$f.tex
 	fi
 done
 
-
-# class file and bib
-cp -f sigirforum.cls sigirforum.bib zip/
-
-echo "##### zip #####"
+rm -f zip/*.aux zip/*.bbl zip/*.blg zip/*.log zip/*.out zip/*.synctex.gz
 
 # pack into a zip and release
+echo "##### zip #####"
+
 mkdir -p releases
 
-echo 'Version? '
-read version
-rm -f releases/template-${version}.zip
-7z a -bb0 releases/template-${version}.zip ./zip/*
-7z l releases/template-${version}.zip
+rm -f releases/template-${sigirforumversion}.zip
+7z a -bb0 releases/template-${sigirforumversion}.zip ./zip/*
+7z l releases/template-${sigirforumversion}.zip
