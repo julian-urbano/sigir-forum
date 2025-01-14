@@ -18,11 +18,11 @@
 \authors{
 Tirthankar Ghosal, Josiane Mothe, Juli\'an Urbano\\
 SIGIR Forum editors\\
-\small{\texttt{editors\_SIGIR@acm.org}}}
-
+\small{\href{mailto:editors_SIGIR@acm.org}{\color{black}\nolinkurl{editors_SIGIR@acm.org}}}
+}
 \maketitle 
 \begin{abstract}
-This document contains the instructions for the SIGIR Forum publication template in \LaTeX\xspace as of version {{SIGIRFORUMVERSION}}, {{SIGIRFORUMDATE}}. For the latest version, please visit the Github repository.\footnote{\url{https://github.com/julian-urbano/sigir-forum}}
+This document contains the instructions for the SIGIR Forum publication template in \LaTeX\xspace as of version {{SIGIRFORUMVERSION}}, {{SIGIRFORUMDATE}}. For the latest version, please visit the Github repository.\footnote{\url{https://github.com/julian-urbano/sigir-forum/releases/latest}}
 \end{abstract}
 
 \section{Publication Type}
@@ -62,7 +62,7 @@ If your event does not fit in these categories, please contact the editors for s
 All authors must have an affiliation including country, and at least one of them must indicate a contact email address. Authors are specified with commands \texttt{\textbackslash authors} and \texttt{\textbackslash author}, as follows:
 \begin{verbatim}
     \authors{
-        \author[jane.doe@sigir.org]{Jane Doe}{ACM SIGIR}{USA}
+        \author[jane_doe@sigir.org]{Jane Doe}{ACM SIGIR}{USA}
         \and
         \author{John Doe}{ACM SIGIR}{USA}
         % \and ...
@@ -73,7 +73,7 @@ Note how e-mail addresses are indicated as an optional parameter to \texttt{\tex
 The front page may easily clutter if there are dozens of authors. In these cases, you can list the first few authors and their affiliations as detailed above, and then use \texttt{\textbackslash authorothers} to list the remaining authors \textsl{only by their names}. This will automatically create a link to an appendix for you to list \textsl{all} affiliations in full:
 \begin{verbatim}
     \authors{
-        \author[jane.doe@sigir.org]{Jane Doe}{ACM SIGIR}{USA}
+        \author[jane_doe@sigir.org]{Jane Doe}{ACM SIGIR}{USA}
         \and
         \author{John Doe}{ACM SIGIR}{USA}
         \and
@@ -139,7 +139,7 @@ If there is no website, leave it empty:
 
 In \textbf{disseration abstracts}, please keep all the text within the \texttt{abstract} environment; no text is allowed out of it. For other publication types, write an abstract and use sections as usual. There is no page limit, except for \textbf{dissertation abstracts}, which have a limit of one page plus references and metadata.
 
-Please refrain from using \href{https://sigir.org}{hidden links like this}. All in-text URLs must be written with the \texttt{\textbackslash url} command, and they should appear in footnotes whenever possible. Exceptions are possible if adding footnotes would harm readability. Please contact the editors if unsure.
+Please refrain from using \href{https://sigir.org}{hidden links like this}. All in-text URLs must be written with the \texttt{\textbackslash url} command, and they should appear in footnotes whenever possible. Exceptions are possible if adding footnotes would harm readability; please contact the editors if unsure. If you want to provide an email address in the text, use command \texttt{\textbackslash email}.
 
 %It is possible for a URL to span over multiple lines or run over the margins. Please split these multi-line URLs with \texttt{\textbackslash href} and \texttt{\textbackslash linebreak}, as follows:
 %\begin{verbatim}
@@ -178,9 +178,9 @@ Acknowledgments should appear at the end of the manuscript, using \texttt{\textb
 \section{Submission}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-You can submit your publication via email to \url{editors\_SIGIR@acm.org}. Please include all the source files and a compiled PDF.
+You can submit your publication via email to \email{editors_SIGIR@acm.org}. Please include all the source files and a compiled PDF.
 
-Attached to these instructions there is a \textbf{checklist document} with a list of items to check that your manuscript follows the SIGIR Forum template. Please check all items before you make a submission.
+Attached to these instructions there is a \textbf{checklist document}\footnote{\url{https://github.com/julian-urbano/sigir-forum/releases/download/v{{SIGIRFORUMVERSION}}/checklist.pdf}} with a list of items to check that your manuscript follows the SIGIR Forum template. Please check all items before you make a submission.
 
 \bibliography{sigirforum}
 \end{document}

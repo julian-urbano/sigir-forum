@@ -47,6 +47,9 @@
 \RequirePackage[font=small,labelfont=bf,labelsep=period]{caption}
 \RequirePackage{hyphenat}
 
+% EMAIL COMMAND
+\newcommand{\email}[1]{\href{mailto:#1}{\nolinkurl{#1}}}
+
 % REPLACE AUTHOR MACRO
 \def\forum@pdfauthors{}
 \ExplSyntaxOn
@@ -58,7 +61,7 @@
 		\g@addto@macro\forum@pdfauthors{,~#2}%
 	}%
 	#2\\[-0.25ex]\small{#3}\\[-0.5ex]\small{#4}%
-	\IfValueT{#1}{\tl_if_empty:nF{#1}{\\[-0.5ex]\footnotesize\texttt{#1}}}%
+	\IfValueT{#1}{\tl_if_empty:nF{#1}{\\[-0.5ex]\footnotesize\href{mailto:#1}{\color{black}\nolinkurl{#1}}}}%
 }
 \ExplSyntaxOff
 % OTHER AUTHORS
